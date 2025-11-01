@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feed | EchoMateLite</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+    <h2>EchoMateLite Feed</h2>
+    <form method="POST" action="/feed">
+        <textarea name="content" placeholder="What's on your mind?" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Post</button>
+    </form>
+    <hr>
+    <h3>All Posts</h3>
+    {% for post in posts %}
+        <p>🗨️ {{ post }}</p>
+    {% endfor %}
+    <br><a href="/profile">View Profile</a>
+</body>
+</html>
